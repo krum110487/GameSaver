@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="/js/library/jquery-3.5.1.js"></script>
+    <script src="/js/library/jszip.js"></script>
+    <script src="/js/library/filesaver.js"></script>
+    <style>
+        a {
+            cursor: pointer;
+        }
+
+        .loader {
+            border: 8px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 8px solid #3498db;
+            width: 2px;
+            height: 2px;
+            visibility: hidden;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+        
+        /* Safari */
+        @-webkit-keyframes spin {
+          0% { -webkit-transform: rotate(0deg); }
+          100% { -webkit-transform: rotate(360deg); }
+        }
+        
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+    </style>
+    <link rel="stylesheet" href="popup.css">
+    <style>
+        body {
+            width: 400px;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="position: absolute;float: right;right: 135px; top:20px">
+        <div id="loader" class="loader" style="visibility: hidden;"></div>
+    </div>
+    <div style="position: absolute;float: right;right: 10px;">
+        <button id="download">Download Games</button>
+    </div>
+    <ul>
+        <li>
+            <input id="activateToggle" type="checkbox" class="switch">
+            <label for="activateToggle">Disabled</label>
+        </li>
+        <ul>
+            <li>
+                <input id="flashOnly" type="radio" name="radio" value="1" checked disabled>
+                <label for="flashOnly">Save Flash Only Mode</label>
+            </li>
+            <li>
+                <input id="allMode" type="radio" name="radio" value="2" disabled>
+                <label for="allMode">Save All Mode (Coming Soon)</label>
+            </li>
+            <ul>
+                <li>
+                    <input id="autoBaseline" type="checkbox" checked disabled>
+                    <label for="autoBaseline">Auto baseline check (Coming Soon)</label>
+                </li>
+            </ul>
+        </ul>
+    </ul>
+    <div>
+        F12 will bring up the devtools, where you can find the "Game Saver" tab to see the list of files the extension has captured.
+        <br><br>
+        If you have any issues feel free to report them at <a target="_blank" href="https://github.com/krum110487/GameSaver">GitHub</a>
+        <br>
+        If you cannot download your games due to a bug or issue, I can help you recover the files, just post an issue on github.
+        <br><br>
+        This project is not directly affiliated with Bluemaxima's Flashpoint, although I am active on discord. You can find me there for more direct help (krum110487). You can upload the files however you want, but I suggest to use <a target="_blank" href="https://archive.org/upload/">Internet Archive</a> or to Flashpoint's <a target="_blank" href="https://flashfreeze.submissions.unstable.life/">Flashfreeze</a> (or both!)
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
