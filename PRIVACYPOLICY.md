@@ -1,4 +1,4 @@
-#Privacy Policy
+# Privacy Policy
 
 Date:12/9/2020
 
