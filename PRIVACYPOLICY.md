@@ -1,4 +1,5 @@
-Privacy Policy
+#Privacy Policy
+
 Date:12/9/2020
 
 Game Saver will not save ANYTHING, everything you do is done locally.
